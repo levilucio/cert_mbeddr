@@ -1,0 +1,14 @@
+#TeXlipse project settings
+#Wed Dec 02 14:59:36 CET 2015
+markTmpDer=true
+builderNum=2
+outputDir=
+makeIndSty=
+bibrefDir=
+outputFormat=pdf
+tempDir=
+mainTexFile=mbeddr_proposal.tex
+outputFile=mbeddr_proposal.pdf
+langSpell=en
+markDer=true
+srcDir=
