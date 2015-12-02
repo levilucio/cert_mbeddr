@@ -1,0 +1,104 @@
+% This is LLNCS.DEM the demonstration file of
+% the LaTeX macro package from Springer-Verlag
+% for Lecture Notes in Computer Science,
+% version 2.4 for LaTeX2e as of 16. April 2010
+%
+\documentclass{llncs} 
+%
+\usepackage{makeidx}  % allows for indexgeneration
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{subfigure}
+\usepackage{amsmath,amssymb,amstext} % Lots of math symbols and environments 
+\usepackage{wrapfig}
+
+\usepackage{color, colortbl}
+
+\newcommand{\chunk}[2]{%
+	\fcolorbox{black}{yellow}{\bfseries\sffamily\scriptsize#1}% 
+   {$\blacktriangleright$#2$\blacktriangleleft$}%
+} 
+
+\renewcommand\floatpagefraction{.4}
+\renewcommand\topfraction{.9} 
+\renewcommand\bottomfraction{.9}
+\renewcommand\textfraction{.3}   
+%\renewcommand{\baselinestretch}{1.5}
+\setlength{\intextsep}{4pt} % Vertical space above & below [h] floats
+\setlength{\textfloatsep}{1pt} % Vertical space below (above) [t] ([b]) floats
+\setlength{\abovecaptionskip}{6pt}
+\setlength{\belowcaptionskip}{6pt}
+
+    
+\newcommand{\levi}[1]{\chunk{Levi}{\textbf{\textcolor{red}{\textsl{#1}}}}}
+\newcommand{\zaur}[1]{\chunk{zaur}{\textbf{\textcolor{blue}{\textsl{#1}}}}}
+\newcommand{\markus}[1]{\chunk{markus}{\textbf{\textcolor{green}{\textsl{#1}}}}}
+
+\begin{document}
+%
+\frontmatter          % for the preliminaries 
+%
+\pagestyle{headings}  % switches on printing of running heads
+
+\mainmatter              % start of the contributions
+%
+\title{\emph{fortiss-mbeddr}\\
+building certified embedded C code}
+
+
+\author{Levi L{\'u}cio}
+
+\institute{fortiss GmbH}
+
+\maketitle              % typeset the title of the contribution
+\setcounter{footnote}{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction} 
+\label{sec:background} 
+\input{text/background}
+
+
+\section{Building Certified Embedded Software in C}
+\label{sec:project_certification} 
+\input{text/project_certification}
+
+
+\subsection{Work Package 1: Certifying Code Generation}
+\label{sec:wp1}
+\input{text/wp1} 
+
+
+\subsection{Work Package 2: Traceability}
+\label{sec:wp2}
+\input{text/wp2} 
+
+
+\subsection{Work Package 3: Restricting \emph{mbeddr} to safe C subsets}
+\label{sec:wp3}
+\input{text/wp3} 
+
+
+\subsection{Work Package 4: Certification and Variability}
+\label{sec:wp4}
+\input{text/wp4} 
+
+
+\subsection{Work Package 5: Dissemination}
+\label{sec:wp5} 
+\input{text/wp5} 
+
+
+\subsection{Collaborations}
+\label{sec:collaborations}
+\input{text/collaborations} 
+
+
+\bibliographystyle{abbrv}
+\bibliography{mbeddr_proposal.bib}
+% \large
+% \appendix{\textbf{Appendix - Overlapping Rules} \\}
+% \normalsize{}
+% \input{rule_overlapping_technique}
+\end{document}

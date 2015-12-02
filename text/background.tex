@@ -1,0 +1,32 @@
+The C language lends itself to writing compact and efficient code in terms of
+speed and space, for a multitude of computer architectures. It is thus naturally
+heavily used in the development of embedded systems. C’s expressiveness comes
+nonetheless at a price: the language is notionally heavy and its flexibility
+(e.g. at the level of memory management) makes it such that non-intended
+behaviors can occur due to complex program statements that are syntactically
+correct, but for which the semantics are difficult to understand and predict.
+Given that C is very often used to develop safety-critical systems, it is
+fundamental to provide C programmers with tools that assist them in writing
+correct code.
+
+In order to address these issues, the \emph{mbeddr} editor for the C language has been
+built\cite{SzaboVKRS14}. \emph{mbeddr}\footnote{Based on JetBrains’ MPS
+(https://www.jetbrains.com/mps/)} is a projectional editor, which means code is
+written as a model that combines a number of instances of concepts of the C
+language. The advantages when comparing projectional editing with classical text
+editing are many:
+
+\begin{itemize}
+  \item The programmer can only make use of the valid and finite set of language
+  constructs and their instances available at any point in the code. This is a
+  step beyond classical text-based code editors in that writing syntactically
+  correct code is granted by construction.
+  \item \emph{mbeddr} leverages the flexible language definition environment of MPS,
+  allowing the definition and usage of abstractions for the C language that
+  allow the programmer to concentrate on the essential complexity of the problem
+  at hand while avoiding the accidental complexity of C’s notation.
+  \item Automated model transformations are used to automatically fill in the
+  details abstracted by the editor. This ensures that the error prone code
+  avoided by the abstractions proposed by the editor is filled in automatically
+  and correctly into the final project’s compilable and runnable C code.
+\end{itemize}

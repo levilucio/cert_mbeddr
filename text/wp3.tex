@@ -1,0 +1,35 @@
+Besides explicit verification, another means to increase confidence in the
+correcion of the generated C code is to restrict the C language itself.
+Naturally, when the subset of the language that is used is restricted, the
+classes of errors that can be made by the developer are also restricted. \emph{mbeddr}
+offers us the possibility of performing such restrictions by adjusting the
+definition of the \emph{mbeddr} editor –- in other words, by changing \emph{mbeddr}’s C
+metamodel. An example of such an adjustment would be the implementation of the
+MISRA C\footnote{http://www.misra-c.com/} or the CERT
+C\footnote{https://www.securecoding.cert.org/} profiles in \emph{mbeddr}’s front-end.
+In practice this would consist of disallowing for example dynamic memory
+allocation, data types that might have different interpretations in different
+platforms and other error prone C concepts that are typically avoided in the
+critical system domain.
+Our goal is also to build on safe subsets of C, by proposing domain-specific
+abstractions that can benefit from such safety guarantees. Targeted domains are
+the automotive (e.g. by proposing \emph{mbeddr} abstractions that can simplify
+construc- tion of C code for the AUTOSAR architecture) and the
+aerospace.\levi{@Markus: you mentioned \emph{mbeddr} being used for satellite software
+development. Are there standards or specific C abstractions for this domain that
+we could think about?}
+
+\begin{itemize}
+  \item Deliverables:
+  \begin{enumerate}
+    \item Restriction of C to enforce a subset of the rules for both MISRA C and
+    CERT C.
+\item Technical proofs of the correction of the generated code for the tackled C
+subsets. This will involve putting together an argument that makes use of the
+results of code generation contract checkers (from Work Package 1) and the CBMC
+model checker already integrated in \emph{mbeddr}.
+  \end{enumerate}
+  \item Effort: 4 man-months
+  \item HQP: Zaur Molotnikov and Levi L\'ucio
+  \item Collaborations
+\end{itemize}
