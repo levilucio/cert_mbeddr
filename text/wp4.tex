@@ -1,22 +1,26 @@
 The technical mechanisms mentioned above are pieces in the formulation of a
-complete argument for the correctness of C applications created using \emph{mbeddr}’s
-front end. A complete such argument requires assembling all those pieces in a
-technically and logically meaningful fashion. The result of this work implies
-putting together formal and non-formal arguments that would constitute a suf-
-ficiently strong proof such that the generated C code is considered certified.
+complete argument for the correctness of C applications created using
+\emph{mbeddr}’s front end. A complete such argument requires assembling all
+those pieces in a technically and logically meaningful fashion. The result of
+this work implies putting together formal and non-formal arguments that would
+constitute a suf- ficiently strong proof such that the generated C code is
+considered certified.
 Coming up with a strategy for assembling those arguments will require interac-
 tion with ongoing projects at fortiss.\levi{􏰀Sebastian’s project, IETS3􏰁 and
-to make use of their results}
-A final point of interest of this project is to investigate how multiple C
-profiles can co-exist within \emph{mbeddr}, together with their associated
-certification techniques. This can be achieved by making use of \emph{mbeddr}’s native
-support for variability and potentially extending it. \emph{mbeddr} allows building a
-product line out of a language, by enabling or disabling certain of the
-language’s concepts based on a set of features that are selected for that
-language. This variability would then need to be extended to the technical
-mechanisms proposed in Work Packages 1 through 3 such that each C profile can be
-directly associated to a set of activities that would need to be carried out in
-order to certify software built using that profile.
+to make use of their results} A final point of interest of this project is to
+investigate how multiple C profiles can co-exist within \emph{mbeddr}, together
+with their associated certification techniques. This can be achieved by making
+use of \emph{mbeddr}’s native support for variability and potentially extending
+it. \emph{mbeddr} allows building a product line out of a language, by enabling
+or disabling certain of the language’s concepts based on a set of features that
+are selected for that language\markus{Well, not quite. We cannot easily use the
+PLE stuff on language level. But we can define modular sets of constraints that
+can or cannot be used in particular programs. Same effect, but different
+approach.}.
+This variability would then need to be extended to the technical mechanisms
+proposed in Work Packages 1 through 3 such that each C profile can be directly
+associated to a set of activities that would need to be carried out in order to
+certify software built using that profile.
 
 \begin{itemize}
   \item Deliverables:
