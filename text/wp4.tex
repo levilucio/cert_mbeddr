@@ -1,22 +1,22 @@
+\paragraph{\textbf{Objective}}: To integrate the technical means provided by
+Work Packages 1, 2 and 3 such that arguments for the certification of the C code
+produced by \emph{mbeddr} can be built and reused in a modular
+fashion.\vspace{.2cm}\\
 The technical mechanisms mentioned above are pieces in the formulation of a
 complete argument for the correctness of C applications created using
 \emph{mbeddr}’s front end. A complete such argument requires assembling all
 those pieces in a technically and logically meaningful fashion. The result of
 this work implies putting together formal and non-formal arguments that would
-constitute a suf- ficiently strong proof such that the generated C code is
+constitute a sufficiently strong proof such that the generated C code is
 considered certified.
-Coming up with a strategy for assembling those arguments will require interac-
-tion with ongoing projects at fortiss.\levi{􏰀Sebastian’s project, IETS3􏰁 and
-to make use of their results} A final point of interest of this project is to
-investigate how multiple C profiles can co-exist within \emph{mbeddr}, together
-with their associated certification techniques. This can be achieved by making
-use of \emph{mbeddr}’s native support for variability and potentially extending
-it. \emph{mbeddr} allows building a product line out of a language, by enabling
-or disabling certain of the language’s concepts based on a set of features that
-are selected for that language\markus{Well, not quite. We cannot easily use the
-PLE stuff on language level. But we can define modular sets of constraints that
-can or cannot be used in particular programs. Same effect, but different
-approach.}.
+Coming up with a strategy for assembling those arguments will require
+interaction with ongoing projects at fortiss. A final point of interest of this
+project is to investigate how multiple C profiles can co-exist within
+\emph{mbeddr}, together with their associated certification techniques. This can
+be achieved by making use of \emph{mbeddr}’s native support for variability and
+potentially extending it. \emph{mbeddr} allows enabling or disabling certain
+of C’s constructs for a given program, based on a set of C's features that
+should be enabled or not enabled for that particular program.
 This variability would then need to be extended to the technical mechanisms
 proposed in Work Packages 1 through 3 such that each C profile can be directly
 associated to a set of activities that would need to be carried out in order to
@@ -27,18 +27,20 @@ certify software built using that profile.
   \begin{enumerate}
     \item A prototype for a method to integrate the artifacts built by work
     packages 1, 2 and 3 (code generation contracts, traceability, restrictions to C and
-domain-specific abstractions) into a unified argument for the certi- fication of
+domain-specific abstractions) into a unified argument for the certification of
 the generated C code.
-\item A prototype for a method to introduce variability in a certification argu-
-ment for \emph{mbeddr}. This will be achieved by introducing variability at the level
-of the technical artifacts used to build the certification argument: code
-generation contracts, C restrictions and domain-specific abstrac- tions,
+\item A prototype for a method to introduce variability in a certification
+argument for \emph{mbeddr}. This will be achieved by introducing variability at
+the level of the technical artifacts used to build the certification argument:
+code generation contracts, C restrictions and domain-specific abstractions,
 traceability or others that may arise during the execution of the project. The
-subsets of the MISRA and CERT C profiles implemented in Work Package 3 will be
-used as case studies to develop the method.
+subset of the MISRA C profile implemented in Work Package 3 together with the
+standard \emph{mbeddr} C will be used as concrete examples to develop the
+method.
   \end{enumerate}
   \item Effort: 4 man-months
-  \item HQP: Levi L\'ucio
-  \item Collaborations: Members of the IETS3 project on analysis of
-  requirements.
+  \item HQP: Levi L\'ucio, Zaur Molotnikov
+  \item Collaborations: Sebastian Voss and the members of the IETS3 project on
+  analysis of requirements will provide their expertise on the formulation of
+  arguments of correctness for software.
 \end{itemize}
