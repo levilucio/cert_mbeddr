@@ -1,20 +1,23 @@
 The C language lends itself to writing compact and efficient code in terms of
 speed and space, for a multitude of computer architectures. It is thus naturally
-heavily used in the development of embedded systems. C's expressiveness comes
-nonetheless at a price: compact notation together with the language's flexible
+heavily used in the development of embedded systems. However, C's expressiveness
+comes at a price: compact notation together with the language's flexible
 semantics (e.g. at the level of memory management) makes it such that
-non-intended behaviors can easily happen at run-time. This is due to the fact
+non-intended behaviors can easily occur at run-time. This is due to the fact
 that C programs often contain complex program statements that are syntactically
 correct, but for which the semantics are difficult to understand and predict. Given that C is
-very often used to develop safety-critical systems, it is fundamental to provide
+often used to develop safety-critical systems, it is critical to provide
 C programmers with tools that assist them in writing correct code.
 
-In order to address these issues, the \emph{mbeddr} editor for the C language
-has been built~\cite{SzaboVKRS14}. \emph{mbeddr} is a projectional editor based
-on JetBrains’ MPS\footnote{https://www.jetbrains.com/mps/)}.
+In order to address these issues, the \emph{mbeddr} stack 
+has been built~\cite{VoelterRKS13}. At its core, it consists of a set of
+extensions to the C programming language specific to development of embedded
+software. \emph{mbeddr} relies on the projectional editor provided
+by JetBrains’ MPS\footnote{https://www.jetbrains.com/mps/)}.
 The principle of projectional editing is that code is written as a model that is
-a composition of instances of concepts of the C language. The advantages of
-projectional editing when compared to classical text editing are many:
+a composition of instances of concepts of a language (C or C extensions in case
+of mbeddr). Compared to classical text editing, the advantages of projectional
+editing are many:
 
 \begin{itemize}
   \item The programmer can only make use of the valid and finite set of language
@@ -25,8 +28,8 @@ projectional editing when compared to classical text editing are many:
   allowing the definition and usage of modular extensions for the C language
   that allow the programmer to concentrate on the essential complexity of the problem
   at hand while avoiding the accidental complexity of C’s notation.
-  \item Automated model transformations are used to automatically fill in the
-  details abstracted by the extensions. This ensures that the error prone code
-  avoided by the abstractions proposed by the editor is filled in automatically
+  \item Automated model transformations are used to fill in the
+  details abstracted away by the extensions. This ensures that the error-prone
+  code avoided by the abstractions provided by mbeddr is filled in automatically
   and correctly into the final project’s compilable and runnable C code.
 \end{itemize}

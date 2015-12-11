@@ -4,15 +4,18 @@ produced by \emph{mbeddr} can be built and reused in a modular
 fashion.\vspace{.2cm}\\
 The technical mechanisms mentioned above are pieces in the formulation of a
 complete argument for the correctness of C applications created using
-\emph{mbeddr}’s front end. A complete such argument requires assembling all
-those pieces in a technically and logically meaningful fashion. The result of
+\emph{mbeddr}’s front end\markus{What is this ``front-end'' business about?
+If you really need to use the word, the mbeddr *is* a front-end to C, but it
+doesn't *have* one. So writing ``mbeddr's front-end'' does not make sense.}.
+A complete such argument requires assembling all those pieces in a technically and logically meaningful fashion. The result of
 this work implies putting together formal and non-formal arguments that would
-constitute a sufficiently strong proof such that the generated C code is
-considered certified.
+constitute a sufficiently strong proof\markus{It's not a proof, right? It is a
+``sufficiently strong argument'' or it ``provides sufficiently convincing
+evidence''} such that the generated C code is considered certified.
 Coming up with a strategy for assembling those arguments will require
-interaction with ongoing projects at fortiss. A final point of interest of this
-project is to investigate how multiple C profiles can co-exist within
-\emph{mbeddr}, together with their associated certification techniques. This can
+interaction with ongoing projects at fortiss. A final point\markus{Is this
+really a kinda minor subpoint of this WP?} of interest of this project is to
+investigate how multiple C profiles can co-exist within \emph{mbeddr}, together with their associated certification techniques. This can
 be achieved by making use of \emph{mbeddr}’s native support for variability and
 potentially extending it. \emph{mbeddr} allows enabling or disabling certain
 of C’s constructs for a given program, based on a set of C's features that
