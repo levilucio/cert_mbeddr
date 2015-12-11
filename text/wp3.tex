@@ -6,15 +6,14 @@ Naturally, when the subset of the language that is used is restricted, the
 classes of errors that can be made by the developer are also restricted.
 \emph{mbeddr} offers the possibility of using constraints to enforce such
 restrictions directly in the editor. An example of such an adjustment would be
-the implementation of the MISRA C\footnote{http://www.misra-c.com/} or the CERT
-C\footnote{https://www.securecoding.cert.org/} profiles in \emph{mbeddr}.
+the implementation of the MISRA C\footnote{http://www.misra-c.com/} profile in
+\emph{mbeddr}.
 In practice this would consist of disallowing for example dynamic memory
 allocation, data types that might have different interpretations in different
 platforms and other error prone C concepts that are typically avoided in the
 critical system domain.
 Our goal is also to build on safe subsets of C, by proposing domain-specific
-abstractions\markus{if you add abstractions, then this is not restriction. Can
-you explain?} that can benefit from such safety guarantees.
+abstractions that can benefit from such safety guarantees.
 Targeted domains are the automotive (e.g. by proposing \emph{mbeddr} abstractions that can simplify
 construction of C code for the AUTOSAR architecture) and the aerospace.
 % \levi{@Markus: you mentioned \emph{mbeddr} being used for satellite software
@@ -27,11 +26,16 @@ construction of C code for the AUTOSAR architecture) and the aerospace.
 \begin{itemize}
   \item Deliverables:
   \begin{enumerate}
-    \item Restriction of C to enforce a subset of the rules for MISRA C.
-\item Technical proofs of the correction of the generated code for the tackled C
-subsets. This will involve putting together an argument that makes use of the
-results of code generation contract checkers (from Work Package 1) and the CBMC
-model checker already integrated in \emph{mbeddr}.
+    \item\label{bul:restriction}Restriction of C to enforce a subset of the
+    rules for MISRA C.
+    \item\label{bul:abstraction} A set of domain-specific C language
+    abstractions, built on top of the C subset introduced in
+    deliverable~\ref{bul:restriction}.
+\item Technical proofs of the correction of the generated code for restrictions
+ans abstractions introduced in deliverables~\ref{bul:restriction}
+and~\ref{bul:abstraction}.
+This will involve putting together arguments that make use of the results of
+code generation contract checkers (from Work Package 1) and the CBMC model checker already integrated in \emph{mbeddr}.
   \end{enumerate}
   \item Effort: 4 man-months
   \item HQP: Zaur Molotnikov, Levi L\'ucio
