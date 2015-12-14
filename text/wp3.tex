@@ -1,45 +1,73 @@
-\paragraph{\textbf{Objective}}: To experiment with restrictions and abstractions
-of the C language to improve developer productivity.\vspace{.2cm}\\
-Besides explicit verification, another means to increase confidence in the
-correction of the generated C code is to restrict the C language itself.
-Naturally, when the subset of the language that is used is restricted, the
-classes of errors that can be made by the developer are also restricted.
-\emph{mbeddr} offers the possibility of using constraints to enforce such
-restrictions directly in the editor. An example of such an adjustment would be
-the implementation of the MISRA C\footnote{http://www.misra-c.com/} profile in
-\emph{mbeddr}.
-In practice this would consist of disallowing for example dynamic memory
-allocation, data types that might have different interpretations in different
-platforms and other error prone C concepts that are typically avoided in the
-critical system domain.
-Our goal is also to build on safe subsets of C, by proposing domain-specific
-abstractions that can benefit from such safety guarantees.
-Targeted domains are the automotive (e.g. by proposing \emph{mbeddr} abstractions that can simplify
-construction of C code for the AUTOSAR architecture) and the aerospace.
-% \levi{@Markus: you mentioned \emph{mbeddr} being used for satellite software
-% development. Are there standards or specific C abstractions for this domain
-% that we could think about?}\markus{They have somehthing similar to MISRA.}
-% \markus{This WP would not be done by modifying mbeddr C's meta model because
-% this would be an invasive change. Rather, various forms for constraints would
-% have to be used.}
+\paragraph{\textbf{Objective}}: Developing infrastructure to support orthogonal
+means for restricting a language according to (some) standard.\vspace{.2cm}\\
+Supporting a language restriction in order to produce safer code has
+demand in practice. Among such restrictions we find various standards
+governing the way restrictions are to be performed. Example could be MISRA
+C\footnote{http://www.misra-c.com/}, CERT Coding
+Standard\footnote{https://www.securecoding.cert.org/confluence/display/seccode/SEI+CERT+Coding+Standards}
+and others. Coding guidelines is another example of language restrictions 
+widely spread in programming practice.
 
+Given a language developed in mbeddr we want to be able to restrict its usage in
+a particular application instance. Such restrictions are often called ``rules''
+in coding guidelines and standards. An example of a (syntactical) rule would be
+a requirement to always place a curly brace on the next line after a loop header
+in C. Another example of a (semantical) rule would be to never allow dynamic
+memory allocation, or to always check existence of a file before opening it.
+
+In this work package we propose developing infrastructure to support
+so-called ``language profiles''. A language profile, or simply a profile, is a
+description of a set of restrictions which have to apply to a fragment of code
+in a given language. Once described in a language profile, conformance rules
+might be applied to a given language fragment insuring its compliance to the profile.
+%To develop profiling systems in mbeddr we will have to perform the following
+% \begin{itemize}
+%   \item Activities:
+%   \begin{enumerate}
+%     \item Analyse potential useful language restrictions for mbeddr C
+%     \item Come up with a number of examples for such restrictions
+%     \item Find commonailities and try to identify potential technical problems
+%     when implementing them as rules in profiles
+%     \item Plan a language fit to formulating rules in language profiles
+%     \item Develop necessary infrastructure in mbeddr to implement language
+%     profiles in rules as targetted by the research above. This development
+%     should result into the following
+%   \end{enumerate}
+  
 \begin{itemize}
   \item Deliverables:
   \begin{enumerate}
-    \item\label{bul:restriction}Restriction of C to enforce a subset of the
-    rules for MISRA C.
-    \item\label{bul:abstraction} A set of domain-specific C language
-    abstractions, built on top of the C subset introduced in
-    deliverable~\ref{bul:restriction}.
-\item Technical proofs of the correction of the generated code for restrictions
-ans abstractions introduced in deliverables~\ref{bul:restriction}
-and~\ref{bul:abstraction}.
-This will involve putting together arguments that make use of the results of
-code generation contract checkers (from Work Package 1) and the CBMC model checker already integrated in \emph{mbeddr}.
+    \item A verbal description of rules supported by a profiling mechanism and a
+    language within \emph{mbeddr} to formulate language profiles.
+    \item Mechanisms within \emph{mbeddr} for checking a code fragment against a
+    profile.
+    \item Implementation of an example profile in \emph{mbeddr} (e.g. MISRA
+    C).
   \end{enumerate}
   \item Effort: 4 man-months
-  \item HQP: Zaur Molotnikov, Levi L\'ucio
+  \item HQP: Levi L\'ucio, Zaur Molotnikov
   \item Collaborations: Markus Voelter will help with finding
   particular application domains where restrictions and/or abstractions of the C
   language are meaningful and helpful for developers.
 \end{itemize}
+
+% \begin{itemize}
+%   \item Deliverables:
+%   \begin{enumerate}
+%     \item\label{bul:restriction}Restriction of C to enforce a subset of the
+%     rules for MISRA C.
+%     \item\label{bul:abstraction} A set of domain-specific C language
+%     abstractions, built on top of the C subset introduced in
+%     deliverable~\ref{bul:restriction}.
+% \item Technical proofs of the correction of the generated code for restrictions
+% ans abstractions introduced in deliverables~\ref{bul:restriction}
+% and~\ref{bul:abstraction}.
+% This will involve putting together arguments that make use of the results of
+% code generation contract checkers (from Work Package 1) and the CBMC model checker already integrated in \emph{mbeddr}.
+%   \end{enumerate}
+%   \item Effort: 4 man-months
+%   \item HQP: Zaur Molotnikov, Levi L\'ucio
+%   \item Collaborations: Markus Voelter will help with finding
+%   particular application domains where restrictions and/or abstractions of the C
+%   language are meaningful and helpful for developers.
+% \end{itemize}

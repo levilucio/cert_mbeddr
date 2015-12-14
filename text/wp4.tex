@@ -12,31 +12,29 @@ considered certified.
 Coming up with a strategy for assembling those arguments will require
 interaction with ongoing projects at fortiss. Another point of interest of
 this project is to investigate how multiple C profiles can co-exist within
-\emph{mbeddr}, together with their associated certification techniques. This can
+\emph{mbeddr}, together with their certification artifacts. This can
 be achieved by making use of \emph{mbeddr}'s native support for variability and
-potentially extending it. \emph{mbeddr} allows enabling or disabling certain of
-C's constructs for a given program, based on a set of C's features that should
-be enabled or not enabled for that particular program.
+potentially extending it. \emph{mbeddr} allows enabling or disabling certain
+groups of statements for a given program, based on a set of C's features that
+are enabled or disabled for that particular program.
 This variability will then need to be extended to the technical mechanisms
 proposed in Work Packages 1 through 3 such that each C profile can be directly
-associated to a set of activities that would need to be carried out in order to
-certify software built using that profile.
+associated to a set of activities that need to be carried out in order to
+certify C code built using that profile.
 
 \begin{itemize}
   \item Deliverables:
   \begin{enumerate}
     \item A prototype for a method to integrate the artifacts built by work
-    packages 1, 2 and 3 (code generation contracts, traceability, restrictions to C and
-domain-specific abstractions) into a unified argument for the certification of
-the generated C code.
+    packages 1, 2 and 3 (code generation contracts, traceability, C profiles)
+    into a unified argument for the certification of the generated C code.
 \item A prototype for a method to introduce variability in a certification
 argument for \emph{mbeddr}. This will be achieved by introducing variability at
 the level of the technical artifacts used to build the certification argument:
-code generation contracts, C restrictions and domain-specific abstractions,
-traceability or others that may arise during the execution of the project. The
-subset of the MISRA C profile implemented in Work Package 3 together with the
-standard \emph{mbeddr} C will be used as concrete example profiles to develop
-the method.
+the C profiles themselves, code generation contracts, traceability reports or
+others that may arise during the execution of the project. The example profile implemented in
+Work Package 3 together with the standard \emph{mbeddr} C will be used as
+concrete example profiles to develop the method.
   \end{enumerate}
   \item Effort: 4 man-months
   \item HQP: Levi L\'ucio, Zaur Molotnikov
