@@ -1,31 +1,28 @@
-\paragraph{\textbf{Objective}}: Developing infrastructure to support orthogonal
-means for restricting a language according to (some) standard.\vspace{.2cm}\\
-Supporting a language restriction in order to produce safer code has
-demand in practice. Among such restrictions we find various standards
-governing the way restrictions are to be performed. Example could be MISRA
-C\footnote{http://www.misra-c.com/}, CERT Coding
-Standard\footnote{https://www.securecoding.cert.org/confluence/display/seccode/SEI+CERT+Coding+Standards}
-and others. Coding guidelines is another example of language restrictions 
-widely spread in programming practice.
+\paragraph{\textbf{Objective}}: Developing infrastructure to support
+restricting a language according to (some) standard.\vspace{.2cm}\\
+Supporting language restrictions in order to produce safer code is very relevant
+in practice. Various standards specify such restrictions.
+Example include MISRA C\footnote{http://www.misra-c.com/} and CERT Coding
+Standard\footnote{https://www.securecoding.cert.org/confluence/display/seccode/SEI+CERT+Coding+Standards}.
+Coding guidelines are also example of language restrictions, used widely 
+in programming practice.
 
-Given a language developed in mbeddr we want to be able to restrict its usage in
-a particular application instance. Such restrictions are often called ``rules''
-in coding guidelines and standards. An example of a (syntactical) rule would be
-a requirement to always place a curly brace on the next line after a loop header
-in C. Another example of a (semantical) rule would be to never allow dynamic
-memory allocation, or to always check existence of a file before opening it.
+Given a language developed in mbeddr, we want to be able to restrict its usage
+for a particular application or domain. Such restrictions are typically
+implemented as a collection of \emph{rules}.
+An example of a (syntactic) rule would be a requirement to declare all local
+variables at the beginning of a block. Another example of a (semantic) rule
+would be to never allow dynamic memory allocation, or to always check existence
+of a file before opening it.
 
 In this work package we propose developing infrastructure to support
-so-called ``language profiles''. A language profile, or simply a profile, is a
-description of a set of restrictions which have to apply to a fragment of code
+\emph{language profiles}. A language profile is a
+set of restrictions which have to apply to a fragment of code
 in a given language. Once described in a language profile, conformance rules
-can be applied to a given language fragment insuring its compliance to the
-profile.
+can be applied to a given program or program fragment, ensuring its
+compliance with the profile.
 
-Note that besides language restrictions, domain-specific abstractions,
-can be of use to the C developer. We foresee the implementation of such
-abstractions in language profiles to be outside of the time frame allocated to
-this project, and as such consider it as future work.
+
 
 %To develop profiling systems in mbeddr we will have to perform the following
 % \begin{itemize}
