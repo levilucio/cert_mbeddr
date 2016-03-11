@@ -5,22 +5,24 @@ fashion.\vspace{.2cm}\\
 The technical mechanisms mentioned above are pieces in the formulation of a
 complete argument for the correctness of C applications created using the
 \emph{mbeddr} IDE.
-A complete such argument requires assembling all those pieces in a technically and logically meaningful fashion. The result of
-this work implies putting together formal and non-formal arguments that will
-constitute a sufficiently strong argument such that the generated C code can be
-considered certified.
+A complete such argument requires assembling all those pieces in a technically
+and logically meaningful fashion. The result of this work implies putting
+together formal and non-formal arguments that will constitute a sufficiently
+strong argument such that the generated C code can be considered certified.
 Coming up with a strategy for assembling those arguments will require
-interaction with ongoing projects at fortiss. Another point of interest of
-this project is to investigate how multiple C profiles can co-exist within
-\emph{mbeddr}, together with their certification artifacts. This can
-be achieved by making use of \emph{mbeddr}'s native support for variability and
-potentially extending it. \emph{mbeddr} allows enabling or disabling certain
-groups of statements for a given program, based on a set of C's features that
-are enabled or disabled for that particular program.
-This variability will then need to be extended to the technical mechanisms
-proposed in Work Packages 1 through 3 such that each C profile can be directly
-associated to a set of activities that need to be carried out in order to
-certify C code built using that profile.
+interaction with ongoing projects at fortiss.
+
+% Another point of interest of
+% this project is to investigate how multiple C profiles can co-exist within
+% \emph{mbeddr}, together with their certification artifacts. This can
+% be achieved by making use of \emph{mbeddr}'s native support for variability and
+% potentially extending it. \emph{mbeddr} allows enabling or disabling certain
+% groups of statements for a given program, based on a set of C's features that
+% are enabled or disabled for that particular program.
+% This variability will then need to be extended to the technical mechanisms
+% proposed in Work Packages 1 through 3 such that each C profile can be directly
+% associated to a set of activities that need to be carried out in order to
+% certify C code built using that profile.
 
 \begin{itemize}
   \item Deliverables:
@@ -28,13 +30,13 @@ certify C code built using that profile.
     \item{\textbf{D4.1}:} A prototype for a method to integrate the artifacts
     built by work packages 1, 2 and 3 (code generation contracts, traceability, C profiles)
     into a unified argument for the certification of the generated C code.
-\item{\textbf{D4.2}:} A prototype for a method to introduce variability in a
-certification argument for \emph{mbeddr}. This will be achieved by introducing variability at
-the level of the technical artifacts used to build the certification argument:
-the C profiles themselves, code generation contracts, traceability reports or
-others that may arise during the execution of the project. The example profile implemented in
-Work Package 3 together with the standard \emph{mbeddr} C will be used as
-concrete example profiles to develop the method.
+% \item{\textbf{D4.2}:} A prototype for a method to introduce variability in a
+% certification argument for \emph{mbeddr}. This will be achieved by introducing variability at
+% the level of the technical artifacts used to build the certification argument:
+% the C profiles themselves, code generation contracts, traceability reports or
+% others that may arise during the execution of the project. The example profile implemented in
+% Work Package 3 together with the standard \emph{mbeddr} C will be used as
+% concrete example profiles to develop the method.
   \end{itemize}
   \item Effort: 9 man-months
   \item HQP: Levi L\'ucio, staff researcher, M.Sc. student, HiWi student 
