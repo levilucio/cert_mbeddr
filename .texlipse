@@ -1,14 +1,14 @@
 #TeXlipse project settings
-#Wed Dec 02 14:59:36 CET 2015
+#Thu Mar 17 12:38:19 CET 2016
 markTmpDer=true
 builderNum=2
-outputDir=
+outputDir=reduced_to_6months/
 makeIndSty=
 bibrefDir=
 outputFormat=pdf
 tempDir=
-mainTexFile=mbeddr_proposal.tex
-outputFile=mbeddr_proposal.pdf
+mainTexFile=mbeddr_proposal_reduced.tex
+outputFile=mbeddr_proposal_reduced.pdf
 langSpell=en
 markDer=true
-srcDir=
+srcDir=reduced_to_6months
